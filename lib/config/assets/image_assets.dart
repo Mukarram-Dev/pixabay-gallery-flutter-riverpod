@@ -5,5 +5,4 @@ class ImageAssets {
   static const String peoplePic = 'assets/people_pic.jpg';
   static const String flowerPic = 'assets/flower_pic.jpg';
   static const String naturePic = 'assets/nature.jpg';
-  static const String splashGif = 'assets/splash.gif';
 }
