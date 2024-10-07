@@ -1,5 +1,5 @@
-import 'package:tamam_ai_partner/config/theme/text_theme_style.dart';
-import 'package:tamam_ai_partner/utils/gaps.dart';
+import 'package:pixabay_gallery/config/theme/text_theme_style.dart';
+import 'package:pixabay_gallery/utils/gaps.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 

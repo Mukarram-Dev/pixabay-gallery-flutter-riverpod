@@ -1,5 +1,5 @@
-import 'package:tamam_ai_partner/config/assets/image_assets.dart';
-import 'package:tamam_ai_partner/services/splash_services.dart';
+import 'package:pixabay_gallery/config/assets/image_assets.dart';
+import 'package:pixabay_gallery/services/splash_services.dart';
 import 'package:flutter/material.dart';
 
 class SplashScreen extends StatelessWidget {
@@ -19,7 +19,7 @@ class SplashScreen extends StatelessWidget {
           width: size.width,
           child: Center(
             child: Image.asset(
-              ImageAssets.splashGif,
+              ImageAssets.appLogo,
             ),
           ),
         ),

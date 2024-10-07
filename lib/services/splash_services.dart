@@ -1,5 +1,5 @@
 import 'dart:async';
-import 'package:tamam_ai_partner/config/routes/routes_name.dart';
+import 'package:pixabay_gallery/config/routes/routes_name.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -18,7 +18,7 @@ class SplashService {
     //   }
     // });
 
-    _navigateWithDelay(context, RouteName.loginRoute);
+    _navigateWithDelay(context, RouteName.homeRoute);
   }
 
   void _navigateWithDelay(BuildContext context, String routeName) {

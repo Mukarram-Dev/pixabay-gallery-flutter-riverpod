@@ -1,4 +1,4 @@
-import 'package:tamam_ai_partner/config/routes/routes.dart';
+import 'package:pixabay_gallery/config/routes/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 

@@ -1,4 +1,4 @@
-package com.example.tamam_ai_partner
+package com.example.pixabay_gallery
 
 import io.flutter.embedding.android.FlutterActivity
 

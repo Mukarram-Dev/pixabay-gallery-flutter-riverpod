@@ -1,7 +1,6 @@
-import 'package:tamam_ai_partner/config/routes/routes_name.dart';
-import 'package:tamam_ai_partner/views/home/home_page.dart';
-import 'package:tamam_ai_partner/views/language/language_view.dart';
+import 'package:pixabay_gallery/config/routes/routes_name.dart';
 import 'package:go_router/go_router.dart';
+import 'package:pixabay_gallery/views/home/home_view.dart';
 
 import '../../views/login/login_screen.dart';
 import '../../views/signup/signup_screen.dart';
@@ -25,15 +24,8 @@ final router = GoRouter(
       name: RouteName.signUpRoute,
     ),
     GoRoute(
-      path: RouteName.languageRoute,
-      builder: (context, state) => LanguageView(
-        userId: state.uri.queryParameters['userId'] ?? "",
-      ),
-      name: RouteName.languageRoute,
-    ),
-    GoRoute(
       path: RouteName.homeRoute,
-      builder: (context, state) => const HomePage(),
+      builder: (context, state) => const HomeView(),
       name: RouteName.homeRoute,
     ),
   ],

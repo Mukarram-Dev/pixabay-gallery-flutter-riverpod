@@ -1,13 +1,13 @@
-import 'package:tamam_ai_partner/config/assets/image_assets.dart';
-import 'package:tamam_ai_partner/config/components/custom_button.dart';
-import 'package:tamam_ai_partner/config/components/custom_dialog_widget.dart';
-import 'package:tamam_ai_partner/config/components/custom_text_field.dart';
-import 'package:tamam_ai_partner/config/routes/routes_name.dart';
-import 'package:tamam_ai_partner/config/theme/colors.dart';
-import 'package:tamam_ai_partner/config/theme/text_theme_style.dart';
-import 'package:tamam_ai_partner/utils/gaps.dart';
-import 'package:tamam_ai_partner/utils/utils.dart';
-import 'package:tamam_ai_partner/views/login/widgets/password_field.dart';
+import 'package:pixabay_gallery/config/assets/image_assets.dart';
+import 'package:pixabay_gallery/config/components/custom_button.dart';
+import 'package:pixabay_gallery/config/components/custom_dialog_widget.dart';
+import 'package:pixabay_gallery/config/components/custom_text_field.dart';
+import 'package:pixabay_gallery/config/routes/routes_name.dart';
+import 'package:pixabay_gallery/config/theme/colors.dart';
+import 'package:pixabay_gallery/config/theme/text_theme_style.dart';
+import 'package:pixabay_gallery/utils/gaps.dart';
+import 'package:pixabay_gallery/utils/utils.dart';
+import 'package:pixabay_gallery/views/login/widgets/password_field.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
@@ -25,7 +25,6 @@ class LoginScreen extends HookConsumerWidget {
     final passwordFocusNode = useFocusNode();
 
     final formKey = GlobalKey<FormState>();
-    // final authController = ref.read(authControllerProvider.notifier);
 
     return SafeArea(
       child: Scaffold(

@@ -1,6 +1,6 @@
 {
-    "name": "tamam_ai_partner",
-    "short_name": "tamam_ai_partner",
+    "name": "pixabay_gallery",
+    "short_name": "pixabay_gallery",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
