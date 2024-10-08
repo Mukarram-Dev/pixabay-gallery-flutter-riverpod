@@ -4,6 +4,7 @@ import 'package:pixabay_gallery/config/assets/image_assets.dart';
 import 'package:pixabay_gallery/config/theme/colors.dart';
 import 'package:pixabay_gallery/config/theme/text_theme_style.dart';
 import 'package:pixabay_gallery/utils/gaps.dart';
+import 'package:pixabay_gallery/utils/utils.dart';
 
 class HomeAppbar extends HookConsumerWidget {
   const HomeAppbar({super.key});
@@ -13,12 +14,11 @@ class HomeAppbar extends HookConsumerWidget {
     return SliverAppBar(
       pinned: true, // Keep the AppBar pinned at the top when scrolling
       expandedHeight: 230.0,
-      collapsedHeight: 70,
+      collapsedHeight: Utils.getScreenHeight(context) * 0.08,
       flexibleSpace: LayoutBuilder(
         builder: (context, constraints) {
           var appBarHeight = constraints.biggest.height;
-          var isCollapsed = appBarHeight <= 100;
-
+          var isCollapsed = appBarHeight <= 150;
           return Container(
             // Gradient background always visible
             decoration: BoxDecoration(
