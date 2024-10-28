@@ -78,7 +78,6 @@ class GalleryServicesImpl implements GalleryServices {
       if (status == 200) {
         // Parse JSON response body
         final Map<String, dynamic> jsonData = jsonDecode(body);
-        print(jsonData);
         final List<Hits> galleryList = (jsonData['hits'] as List<dynamic>)
             .map((item) => Hits.fromJson(item))
             .toList();

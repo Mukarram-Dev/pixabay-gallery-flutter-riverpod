@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:pixabay_gallery/config/assets/image_assets.dart';
@@ -32,7 +33,8 @@ class PhotosListBuilder extends ConsumerWidget {
             borderRadius: BorderRadius.circular(20),
             color: AppColors.white,
             image: DecorationImage(
-              image: NetworkImage(photo.previewURL ?? ImageAssets.naturePic),
+              image: CachedNetworkImageProvider(
+                  photo.previewURL ?? ImageAssets.naturePic),
               fit: BoxFit.cover,
             ),
           ),

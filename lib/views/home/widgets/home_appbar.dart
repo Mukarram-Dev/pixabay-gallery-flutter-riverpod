@@ -11,16 +11,27 @@ class HomeAppbar extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    // Define a minimum toolbar height for responsive design
+    const double toolbarHeight = kToolbarHeight;
+    // Calculate the screen height to adjust the layout for responsiveness
+    final double screenHeight = Utils.getScreenHeight(context);
+    final bool isWeb =
+        screenHeight > 600; // Check if the screen is for web or larger device
+    final double collapsedHeight = screenHeight * 0.08;
+
     return SliverAppBar(
       pinned: true, // Keep the AppBar pinned at the top when scrolling
-      expandedHeight: 230.0,
-      collapsedHeight: Utils.getScreenHeight(context) * 0.08,
+      expandedHeight: isWeb ? 250.0 : 230.0, // Adjust height for web
+      collapsedHeight: collapsedHeight >= toolbarHeight
+          ? collapsedHeight
+          : toolbarHeight, // Ensure collapsedHeight is >= toolbarHeight
       flexibleSpace: LayoutBuilder(
         builder: (context, constraints) {
           var appBarHeight = constraints.biggest.height;
-          var isCollapsed = appBarHeight <= 150;
+          // Adjust the collapse threshold for web or mobile
+          var isCollapsed = isWeb ? appBarHeight <= 100 : appBarHeight <= 150;
+
           return Container(
-            // Gradient background always visible
             decoration: BoxDecoration(
               borderRadius: BorderRadius.only(
                 bottomLeft: Radius.circular(isCollapsed ? 0 : 30),
@@ -34,7 +45,8 @@ class HomeAppbar extends HookConsumerWidget {
               ),
             ),
             child: Padding(
-              padding: const EdgeInsets.only(top: 40, left: 20, right: 20),
+              padding:
+                  EdgeInsets.only(top: isWeb ? 0 : 40, left: 20, right: 20),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.start,
