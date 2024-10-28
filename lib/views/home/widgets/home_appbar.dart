@@ -15,13 +15,12 @@ class HomeAppbar extends HookConsumerWidget {
     const double toolbarHeight = kToolbarHeight;
     // Calculate the screen height to adjust the layout for responsiveness
     final double screenHeight = Utils.getScreenHeight(context);
-    final bool isWeb =
-        screenHeight > 600; // Check if the screen is for web or larger device
-    final double collapsedHeight = screenHeight * 0.08;
+    // Check if the screen is for web or larger device
+    final double collapsedHeight = screenHeight * 0.07;
 
     return SliverAppBar(
       pinned: true, // Keep the AppBar pinned at the top when scrolling
-      expandedHeight: isWeb ? 250.0 : 230.0, // Adjust height for web
+      expandedHeight: 200.0,
       collapsedHeight: collapsedHeight >= toolbarHeight
           ? collapsedHeight
           : toolbarHeight, // Ensure collapsedHeight is >= toolbarHeight
@@ -29,7 +28,7 @@ class HomeAppbar extends HookConsumerWidget {
         builder: (context, constraints) {
           var appBarHeight = constraints.biggest.height;
           // Adjust the collapse threshold for web or mobile
-          var isCollapsed = isWeb ? appBarHeight <= 100 : appBarHeight <= 150;
+          var isCollapsed = appBarHeight <= 130;
 
           return Container(
             decoration: BoxDecoration(
@@ -45,8 +44,7 @@ class HomeAppbar extends HookConsumerWidget {
               ),
             ),
             child: Padding(
-              padding:
-                  EdgeInsets.only(top: isWeb ? 0 : 40, left: 20, right: 20),
+              padding: const EdgeInsets.only(top: 20, left: 20, right: 20),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.start,
