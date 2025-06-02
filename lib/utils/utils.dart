@@ -2,7 +2,7 @@ import 'package:another_flushbar/flushbar.dart';
 import 'package:another_flushbar/flushbar_route.dart';
 import 'package:pixabay_gallery/config/theme/colors.dart';
 import 'package:flutter/material.dart';
-import 'package:fluttertoast/fluttertoast.dart';
+import 'package:toastification/toastification.dart';
 
 class Utils {
   static void fieldFocusChange(
@@ -19,19 +19,39 @@ class Utils {
     return MediaQuery.of(context).size.height;
   }
 
-  static toastMessage(String msg) {
-    Fluttertoast.showToast(
-      msg: msg,
-      backgroundColor: Colors.black,
-      gravity: ToastGravity.BOTTOM,
+  static toastMessage(
+    String msg, {
+    Color color = AppColors.black,
+  }) {
+    toastification.show(
+      title: Text(
+        msg,
+        textAlign: TextAlign.center,
+        style: const TextStyle(
+          color: AppColors.white,
+          fontSize: 20,
+          fontWeight: FontWeight.w700,
+        ),
+      ),
+      closeOnClick: false,
+      showProgressBar: false,
+      autoCloseDuration: const Duration(seconds: 3),
+      type: ToastificationType.info,
+      style: ToastificationStyle.flat,
+      backgroundColor: color,
+      alignment: Alignment.bottomCenter,
+      showIcon: false,
     );
   }
 
   static toastMessageCenter(String msg) {
-    Fluttertoast.showToast(
-      msg: msg,
+    toastification.show(
+      title: Text(msg),
+      type: ToastificationType.info,
+      style: ToastificationStyle.flat,
+      autoCloseDuration: const Duration(seconds: 3),
       backgroundColor: Colors.black,
-      gravity: ToastGravity.CENTER,
+      alignment: Alignment.center,
     );
   }
 

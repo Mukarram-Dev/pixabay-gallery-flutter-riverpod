@@ -1,0 +1,2 @@
+/Users/hf/Documents/My Flutter Projects/pixabay gallery/pixabay gallery/android/app/.cxx/RelWithDebInfo/232b85c4/x86_64/CMakeFiles/edit_cache.dir
+/Users/hf/Documents/My Flutter Projects/pixabay gallery/pixabay gallery/android/app/.cxx/RelWithDebInfo/232b85c4/x86_64/CMakeFiles/rebuild_cache.dir
